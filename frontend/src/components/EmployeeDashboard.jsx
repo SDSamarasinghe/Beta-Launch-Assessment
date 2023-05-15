@@ -97,11 +97,11 @@ const EmployeeDashboard = () => {
           >
             <thead>
               <tr>
-                <th scope="col" onClick={()=>sorting("dispName")}>Display Name <img src={sorticon} onClick={()=>sorting("designation")}/></th>
+                <th scope="col" onClick={()=>sorting("dispName")}>Display Name <img src={sorticon} alt="displayname" onClick={()=>sorting("designation")}/></th>
                 <th scope="col" >Emp ID</th>
-                <th scope="col" onClick={()=>sorting("designation")}>Designation <img src={sorticon} onClick={()=>sorting("designation")}/></th>
-                <th scope="col" onClick={()=>sorting("empType")}>Emp. Type <img src={sorticon} onClick={()=>sorting("designation")}/></th>
-                <th scope="col" onClick={()=>sorting("experience")}>Experience <img src={sorticon} onClick={()=>sorting("designation")}/></th>
+                <th scope="col" onClick={()=>sorting("designation")}>Designation <img src={sorticon} alt="designation" onClick={()=>sorting("designation")}/></th>
+                <th scope="col" onClick={()=>sorting("empType")}>Emp. Type <img src={sorticon} alt="employeetype" onClick={()=>sorting("designation")}/></th>
+                <th scope="col" onClick={()=>sorting("experience")}>Experience <img src={sorticon} alt="experience" onClick={()=>sorting("designation")}/></th>
                 <th scope="col" >Actions</th>
               </tr>
             </thead>
