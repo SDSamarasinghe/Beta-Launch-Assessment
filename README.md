@@ -14,6 +14,8 @@ node Express application runs on port 5000
 
 4. Once the dependencies are installed, start the development server with the following command:
 
+npm start
+
 ## Usage
 
 To use the application, open a web browser and navigate to `http://localhost:3000/`.
