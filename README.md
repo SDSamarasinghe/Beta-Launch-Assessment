@@ -8,6 +8,9 @@ This is Employee management system for the interview
 2. Open a terminal window and navigate to the project directory.
 3. Run the following command to install the project dependencies:
 
+## backend
+
+node Express application runs on port 5000
 
 4. Once the dependencies are installed, start the development server with the following command:
 
