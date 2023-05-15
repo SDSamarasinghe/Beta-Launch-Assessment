@@ -68,7 +68,7 @@ const AddEmployee = () => {
    
 
     axios
-      .post("http://localhost:8000/api/Employee/employees", employee)
+      .post(`${process.env.REACT_APP_API}/employees`, employee)
       .then((response) => {
         swal({
           title: "Employee Added Successfully!",

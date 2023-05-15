@@ -41,7 +41,7 @@ const EditEmployee = () => {
     };
 
     axios
-      .put(`http://localhost:8000/api/Employee/employees/${eid}`, employee)
+      .put(`${process.env.REACT_APP_API}/employees/${eid}`, employee)
       .then((response) => {
         swal({
           title: "Employee Details Updated Successfully!",
@@ -56,7 +56,7 @@ const EditEmployee = () => {
   };
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/api/Employee/employee/${eid}`).then((res) => {
+    axios.get(`${process.env.REACT_APP_API}/employee/${eid}`).then((res) => {
         setGender(res.data.employee.gender);
         setFullname(res.data.employee.fullname);
         setName(res.data.employee.name);

@@ -14,7 +14,7 @@ const EmployeeDashboard = () => {
   
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/api/Employee/employees`).then((res) => {
+    axios.get(`${process.env.REACT_APP_API}/employees`).then((res) => {
       setEmployees(res.data.employees);
     });
   }, []);
@@ -29,14 +29,14 @@ const EmployeeDashboard = () => {
     }).then((willDelete) => {
       if (willDelete) {
         axios
-          .delete(`http://localhost:8000/api/Employee/employees/${id}`)
+          .delete(`${process.env.REACT_APP_API}/employees/${id}`)
           .then(() => {
             swal("Employee Deleted Successfully!", {
               icon: "success",
             });
 
             axios
-              .get(`http://localhost:8000/api/Employee/employees`)
+              .get(`${process.env.REACT_APP_API}/employees`)
               .then((res) => {
                 setEmployees(res.data.employees);
               });

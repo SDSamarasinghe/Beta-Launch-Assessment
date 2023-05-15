@@ -13,7 +13,7 @@ const app = express();
 dotenv.config();
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "http://localhost:5000",
     credentials: true,
   })
 );
@@ -33,7 +33,7 @@ const sessSettings = expressSession({
 });
 
 app.use(sessSettings);
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 5000;
 
 mongoose.connect(process.env.ATLAS_URI, {
   useNewUrlParser: true,
