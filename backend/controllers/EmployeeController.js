@@ -1,8 +1,7 @@
 const Employee = require("../models/EmoployeeModel");
 
-
 const fetchAllEmployees = (req, res) => {
-    Employee.find({}, (err, docs) => {
+  Employee.find({}, (err, docs) => {
     if (!err) {
       res.status(200).json({ employees: docs });
     } else {
@@ -13,7 +12,7 @@ const fetchAllEmployees = (req, res) => {
 };
 
 const fetchEmloyeeByType = (req, res) => {
-    Employee.find({ emptype: req.params.emptype }, (err, docs) => {
+  Employee.find({ emptype: req.params.emptype }, (err, docs) => {
     if (!err) {
       res.status(200).json({ employees: docs });
     } else {
@@ -24,7 +23,7 @@ const fetchEmloyeeByType = (req, res) => {
 };
 
 const createEmployee = (req, res) => {
-    Employee.create(req.body, (err, data) => {
+  Employee.create(req.body, (err, data) => {
     if (err) res.status(500).json({ error: err });
     res.status(201).json(data);
   });
@@ -48,7 +47,7 @@ const updateEmployee = async (req, res) => {
       return res.status(404).json({ updated: "Employee not found" });
     }
 
-    employee = await employee.findByIdAndUpdate(eid, req.body);
+    await Employee.findOneAndUpdate({ _id: eid }, { $set: req.body });
     res.status(201).json({ updated: "Employee updated successfully" });
   } catch (error) {
     res.status(400).json(error.message);
@@ -64,13 +63,11 @@ const getSingleEmployee = (req, res) => {
   });
 };
 
-
-
 module.exports = {
-    fetchAllEmployees,
-    fetchEmloyeeByType,
-    createEmployee,
-    deleteEmployee,
-    getSingleEmployee,
-    updateEmployee,
+  fetchAllEmployees,
+  fetchEmloyeeByType,
+  createEmployee,
+  deleteEmployee,
+  getSingleEmployee,
+  updateEmployee,
 };

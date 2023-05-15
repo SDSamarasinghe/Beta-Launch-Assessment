@@ -8,7 +8,6 @@ const expressSession = require("express-session");
 // Import routes to here
 const employeeRoutes = require("./routes/EmployeeRoute");
 
-
 const app = express();
 dotenv.config();
 app.use(

@@ -18,7 +18,7 @@ const EditEmployee = () => {
     const [dateOfBirth, setdateOfBirth] = useState("");
     const [empType, setEmpType] = useState("");
     const [experience, setExperience] = useState("");
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
   const { eid } = useParams();
 
@@ -50,7 +50,7 @@ const EditEmployee = () => {
           confirmButtonColor: "#12af39",
           className: "store-swal-button",
         }).then(() => {
-          navigate(-1);
+          navigate("/");
         });
       });
   };
