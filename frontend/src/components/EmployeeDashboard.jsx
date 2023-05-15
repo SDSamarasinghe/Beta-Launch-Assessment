@@ -116,13 +116,13 @@ const EmployeeDashboard = () => {
                   ){
                     return value;
                   }
-                }).map((emp) => (
-                  <tr>
+                }).map((emp,index) => (
+                  <tr key={index}>
                     <th scope="row" style={{ width: "300px" }}>
                       {emp.dispName}
                     </th>
                     <td>
-                      {emp._id}
+                      {(index+1)}
                     </td>
                     <td>{emp.designation}</td>
                     <td>{emp.empType}</td>
