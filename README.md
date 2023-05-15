@@ -2,7 +2,7 @@
 
 This is Employee management system for the interview
 
-##installation
+## installation
 
 1. Clone the repository to your local machine.
 2. Open a terminal window and navigate to the project directory.
